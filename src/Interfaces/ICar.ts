@@ -1,11 +1,10 @@
-interface ICar {
-  id: string;
+interface ICar {  
   year: number;
   color: string;
   status?: boolean;
   buyValue: number;
   doorsQty: number;
-  seatQty: number;
+  seatsQty: number;
 }
 
 export default ICar;
