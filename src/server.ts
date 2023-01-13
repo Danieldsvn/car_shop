@@ -2,6 +2,8 @@ import 'dotenv/config';
 import app from './app';
 import connectToDatabase from './Models/Connection';
 
+app.get('/', () => console.log('hello world!'));
+
 const PORT = process.env.PORT || 3001;
 connectToDatabase()
   .then(() => {
