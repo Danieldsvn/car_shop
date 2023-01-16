@@ -3,7 +3,9 @@ import {
   models,
   Schema,  
   model,
+  isValidObjectId,
 } from 'mongoose';
+import IError from '../Interfaces/IError';
 
 abstract class AbstractODM<T> {
   protected model: Model<T>;
@@ -22,6 +24,12 @@ abstract class AbstractODM<T> {
 
   public async getAll() {
     return this.model.find();
+  }
+
+  public async getById(_id: string): Promise<T | null> {
+    if (!isValidObjectId(_id)) throw Error('Invalid Mongo id');
+
+    return this.model.findById(_id);
   }
 }
 
