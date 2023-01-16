@@ -1,3 +1,4 @@
+import { expect } from 'chai';
 import { Model } from 'mongoose';
 import Sinon from 'sinon';
 import ICar from '../../../../src/Interfaces/ICar';
