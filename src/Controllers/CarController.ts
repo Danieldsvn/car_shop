@@ -14,6 +14,10 @@ class CarController {
   }
 
   public async create() {
+    if (!this.req.body.status) {
+      this.req.body.status = false;
+    }
+
     const car: ICar = {
       model: this.req.body.model,
       year: this.req.body.year,
