@@ -1,5 +1,5 @@
 interface ICar {  
-  id?: number,
+  id?: string,
   model: string,
   year: number;
   color: string;
