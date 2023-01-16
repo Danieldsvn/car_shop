@@ -5,7 +5,6 @@ import {
   model,
   isValidObjectId,
 } from 'mongoose';
-import IError from '../Interfaces/IError';
 
 abstract class AbstractODM<T> {
   protected model: Model<T>;
