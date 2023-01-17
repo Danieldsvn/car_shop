@@ -27,5 +27,6 @@ describe('Deve criar um carro', function () {
     const result = await service.create(validCarWithStatusInput);
 
     expect(result).to.be.deep.equal(outputCar);
+    Sinon.restore();
   });
 });
