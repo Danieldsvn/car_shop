@@ -29,7 +29,10 @@ class CarService {
   }
 
   public async update(_id: string, obj: Partial<ICar>) {
-    return obj;
+    const carODM = new CarODM();
+    const carModified = await carODM.update(_id, obj);
+    if (carModified === null) return null;
+    return this.createCarDomain(carModified);
   }
 }
 
