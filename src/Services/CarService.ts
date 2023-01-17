@@ -27,6 +27,10 @@ class CarService {
     if (car === null) return null;
     return this.createCarDomain(car);
   }
+
+  public async update(_id: string, obj: Partial<ICar>) {
+    return obj;
+  }
 }
 
 export default CarService;
